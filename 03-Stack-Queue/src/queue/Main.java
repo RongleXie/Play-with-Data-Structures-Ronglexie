@@ -6,19 +6,10 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		int count = 100000;
+
 		ArrayQueue<Integer> queue = new ArrayQueue<>();
 
-//		for (int i = 0; i < 10; i++) {
-//			queue.enqueue(i);
-//			System.out.println(queue.toString());
-//
-//			if (i % 3 == 2) {
-//				queue.dequeue();
-//				System.out.println(queue.toString());
-//			}
-//		}
-
-		int count = 100000;
 		double arrayQueueTime = testQueue(queue, count);
 
 		System.out.println("ArrayQueue: "+arrayQueueTime + " s");
@@ -26,6 +17,10 @@ public class Main {
 
 		double loopQueueTime = testQueue(loopQueue, count);
 		System.out.println("LoopQueue: "+loopQueueTime + " s");
+
+		LinkedListQueue<Integer> linkedListQueue = new LinkedListQueue<>();
+		double linkedListQueueTime = testQueue(linkedListQueue, count);
+		System.out.println("LinkedListQueue: "+linkedListQueueTime + " s");
 	}
 
 	private static double testQueue(Queue<Integer> queue,int count){
