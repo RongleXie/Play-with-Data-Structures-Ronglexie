@@ -19,5 +19,12 @@ public class Main {
 		System.out.println(linkedList.toString());
 		linkedList.removeLast();
 		System.out.println(linkedList.toString());
+		linkedList.remove(4);
+		System.out.println(linkedList.toString());
+		linkedList.addFirst(4);
+		linkedList.addFirst(4);
+		linkedList.addFirst(4);
+		linkedList.removeAll(4);
+		System.out.println(linkedList.toString());
 	}
 }

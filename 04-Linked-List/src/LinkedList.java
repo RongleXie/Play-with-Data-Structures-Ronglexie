@@ -146,7 +146,7 @@ public class LinkedList<E> {
 	public boolean contains(E e){
 		Node cur = dummyHead.next;
 		while (cur != null){
-			if (cur.equals(e)){
+			if (cur.e.equals(e)){
 				return true;
 			}
 			cur = cur.next;
@@ -174,7 +174,58 @@ public class LinkedList<E> {
 		prev.next = delNode.next;
 		delNode.next = null;
 		size --;
-	return delNode.e;
+		return delNode.e;
+	}
+
+	/**
+	 * 删除指定元素
+	 *
+	 * @return void
+	 * @author ronglexie
+	 * @version 2018/8/18
+	 */
+	public void remove(E e){
+		if(!contains(e)){
+			throw new IllegalArgumentException("Delete failed. e is not exists.");
+		}
+		Node prev = dummyHead;
+		while (prev.next != null){
+			if(prev.next.e.equals(e)){
+				break;
+			}
+			prev = prev.next;
+		}
+
+		if(prev.next != null){
+			Node delNode = prev.next;
+			prev.next = delNode.next;
+			delNode.next = null;
+			size --;
+		}
+	}
+
+	/**
+	 * 删除所有的指定元素
+	 *
+	 * @return void
+	 * @author ronglexie
+	 * @version 2018/8/18
+	 */
+	public void removeAll(E e){
+		if(!contains(e)){
+			throw new IllegalArgumentException("Delete failed. e is not exists.");
+		}
+		Node prev = dummyHead;
+		while (prev.next != null){
+			if(prev.next.e.equals(e)){
+				Node delNode = prev.next;
+				prev.next = delNode.next;
+				delNode.next = null;
+				size --;
+				continue;
+			}
+			prev = prev.next;
+		}
 	}
 
 	/**
