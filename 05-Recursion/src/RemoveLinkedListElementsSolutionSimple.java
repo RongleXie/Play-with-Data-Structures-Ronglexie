@@ -9,16 +9,6 @@
  * @author ronglexie
  * @version 2018/8/12
  */
-
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- * int val;
- * ListNode next;
- * ListNode(int x) { val = x; }
- * }
- */
-
 class RemoveLinkedListElementsSolutionSimple {
 	public ListNode removeElements(ListNode head, int val) {
 		// 判断头节点是否符合条件，符合即删除
