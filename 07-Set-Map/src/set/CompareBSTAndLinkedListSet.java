@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author ronglexie
  * @version 2018/8/19
  */
-public class CompareBSTandLinkedListSet {
+public class CompareBSTAndLinkedListSet {
 
 	public static void main(String[] args) {
 		BinarySearchTreeSet<String> binarySearchTree = new BinarySearchTreeSet<>();
