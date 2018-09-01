@@ -457,7 +457,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 			else {
 				// 1、删除后用后继节点替代该位置(后继节点即待删除节点右子树中的最小节点)
 				// 获得后继节点
-				Node successor = minimum(node);
+				Node successor = minimum(node.right);
 				// 删除后继节点，并让待删除节点的右子树成为后继节点的右子树
 				successor.right = removeMin(node);
 				// 让待删除节点的左子树成为后继节点的左子树
@@ -468,7 +468,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 				/**
 				// 2、删除后用前驱节点替代该位置(前驱节点即待删除节点左子树中的最大节点)
 				// 获得前驱节点
-				Node predecessor = maximize(node);
+				Node predecessor = maximize(node.left);
 				// 删除前驱节点，并让待删除节点的左子树成为前驱节点的左子树
 				predecessor.left = removeMax(node);
 				// 让待删除节点的右子树成为前驱节点的右子树
