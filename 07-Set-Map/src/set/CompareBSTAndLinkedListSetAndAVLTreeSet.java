@@ -3,12 +3,12 @@ package set;
 import java.util.ArrayList;
 
 /**
- * 比较BinarySearchTreeSet与LinkedListSet
+ * 比较BinarySearchTreeSet、LinkedListSet和AVLTreeSet
  *
  * @author ronglexie
  * @version 2018/8/19
  */
-public class CompareBSTAndLinkedListSet {
+public class CompareBSTAndLinkedListSetAndAVLTreeSet {
 
 	public static void main(String[] args) {
 		BinarySearchTreeSet<String> binarySearchTree = new BinarySearchTreeSet<>();
@@ -22,6 +22,12 @@ public class CompareBSTAndLinkedListSet {
 		double linkedListSetTime = testSet(linkedListSet);
 
 		System.out.println("LinkedListSet :" + linkedListSetTime + "s");
+
+		AVLTreeSet<String> avlTreeSet = new AVLTreeSet<>();
+
+		double avlTreeSetTime = testSet(avlTreeSet);
+
+		System.out.println("AVLTreeSet :" + avlTreeSetTime + "s");
 	}
 
 	private static double testSet(Set<String> set){
