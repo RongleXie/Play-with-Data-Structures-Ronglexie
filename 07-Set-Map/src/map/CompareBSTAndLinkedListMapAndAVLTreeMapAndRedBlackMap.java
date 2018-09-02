@@ -5,12 +5,12 @@ import set.FileOperation;
 import java.util.ArrayList;
 
 /**
- * 比较BinarySearchTreeMap、LinkedListMap和AVLTreeMap
+ * 比较BinarySearchTreeMap、LinkedListMap、AVLTreeMap和RedBlackMap
  *
  * @author ronglexie
  * @version 2018/8/19
  */
-public class CompareBSTAndLinkedListMapAndAVLTreeMap {
+public class CompareBSTAndLinkedListMapAndAVLTreeMapAndRedBlackMap {
 
 	public static void main(String[] args) {
 
@@ -31,6 +31,12 @@ public class CompareBSTAndLinkedListMapAndAVLTreeMap {
 		double avlTreeMapTime = testMap(avlTreeMap);
 
 		System.out.println("AVLTreeMap :" + avlTreeMapTime + "s");
+
+		RedBlackTreeMap<String,Integer> redBlackTreeMap = new RedBlackTreeMap<>();
+
+		double redBlackTreeMapTime = testMap(redBlackTreeMap);
+
+		System.out.println("RedBlackTreeMap :" + redBlackTreeMapTime + "s");
 	}
 
 	private static double testMap(Map<String,Integer> map){
